@@ -1,0 +1,56 @@
+/* Hero Section */
+.hero {
+    background:url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/05/makhana-1296x728-header.jpg?w=1155&h=1528') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+  
+  /* Dark Overlay */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Hero Text */
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Call-to-action Button */
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #f39c12;
+    color: white;
+  }
+  
