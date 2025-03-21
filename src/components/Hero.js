@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Hero.css";
 const Hero = () => {
@@ -31,7 +32,9 @@ const Hero = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          Shop Now
+          <Link to="/products" className="btn btn-primary">
+            Shop Now
+          </Link>
         </motion.a>
       </div>
     </section>

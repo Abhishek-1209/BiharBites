@@ -6,20 +6,20 @@ const products = [
   {
     id: 1,
     name: "Classic Roasted Makhana",
-    price: 199,
-    image: "makhana1.jpg",
+    price: 1999,
+    image: `${process.env.PUBLIC_URL}/assets/makhana1.jpg`,
   },
   {
     id: 2,
     name: "Peri Peri Flavored Makhana",
-    price: 249,
-    image: "makhana2.jpeg",
+    price: 2099,
+    image: `${process.env.PUBLIC_URL}/assets/makhana2.jpeg`,
   },
   {
     id: 3,
     name: "Tandoori Spiced Makhana",
-    price: 229,
-    image: "makhana3.jpg",
+    price: 1199,
+    image: `${process.env.PUBLIC_URL}/assets/makhana3.jpg`,
   },
 ];
 
@@ -32,7 +32,8 @@ const Products = () => {
       <div className="product-container">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            <img src={`/assets/${product.image}`} alt={product.name} className="product-img" />
+            {/* Updated Image Path */}
+            <img src={product.image} alt={product.name} className="product-img" />
             <h3>{product.name}</h3>
             <p className="price">₹{product.price}</p>
             <button className="btn btn-primary" onClick={() => addToCart(product)}>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./CartPage.css";
 
 const CartPage = () => {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, removeFromCart } = useContext(CartContext) || { cart: [] }; // Ensures cart is never undefined
 
   return (
     <div className="cart-page">
@@ -16,10 +16,10 @@ const CartPage = () => {
           <div className="cart-items">
             {cart.map((item) => (
               <div className="cart-item" key={item.id}>
-                <img src={`/assets/${item.image}`} alt={item.name} className="cart-img" />
+                <img src={item.image} alt={item.name} className="cart-img" />
                 <div className="cart-info">
                   <h4>{item.name}</h4>
-                  <p>₹{item.price} x {item.quantity}</p>
+                  <p>₹{item.price} x {item.quantity || 1}</p>
                 </div>
                 <button className="btn btn-danger" onClick={() => removeFromCart(item.id)}>
                   Remove

@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import Hero from './components/Hero';
@@ -10,10 +10,12 @@ import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
+import CartProvider from "./context/CartContext";
 function App() {
   return (
+    <CartProvider>
     <Router>
-      <Navbar />
+        <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/products" element={<Products />} />
@@ -25,6 +27,7 @@ function App() {
       <Testimonial/>
       <Footer/>
     </Router>
+    </CartProvider>
   );
 }
 

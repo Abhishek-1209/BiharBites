@@ -3,12 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #cdad2d ; /* Bootstrap primary blue */
-  padding: 15px 20px;
+  background-color: #cdad2d;
+  padding: 15px 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Brand title */
+/* Logo and Title */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
 .navbar h1 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -46,6 +57,23 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Cart Icon */
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
 /* Responsive - Stack items on small screens */
 @media (max-width: 768px) {
   .navbar {
@@ -59,4 +87,66 @@
     gap: 10px;
     margin-top: 10px;
   }
+
+  .logo {
+    width: 40px;
+  }
+}
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-count {
+  font-weight: bold;
+  font-size: 14px;
+}
+/* Ensure Navbar remains responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .cart-icon {
+    margin-top: 10px; /* Prevents overlap on small screens */
+  }
+}
+
+/* Ensure the cart count stays properly positioned */
+.cart-icon .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+/* Ensure proper alignment for cart icon */
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: inherit;
 }
