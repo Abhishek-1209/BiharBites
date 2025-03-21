@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BiharBites.git/static/css/main.57ec8c50.css",
-    "main.js": "/BiharBites.git/static/js/main.ede35d28.js",
-    "static/js/453.536e47ac.chunk.js": "/BiharBites.git/static/js/453.536e47ac.chunk.js",
-    "index.html": "/BiharBites.git/index.html",
-    "main.57ec8c50.css.map": "/BiharBites.git/static/css/main.57ec8c50.css.map",
-    "main.ede35d28.js.map": "/BiharBites.git/static/js/main.ede35d28.js.map",
-    "453.536e47ac.chunk.js.map": "/BiharBites.git/static/js/453.536e47ac.chunk.js.map"
+    "main.css": "/BiharBites/static/css/main.57ec8c50.css",
+    "main.js": "/BiharBites/static/js/main.8222814c.js",
+    "static/js/453.536e47ac.chunk.js": "/BiharBites/static/js/453.536e47ac.chunk.js",
+    "index.html": "/BiharBites/index.html",
+    "main.57ec8c50.css.map": "/BiharBites/static/css/main.57ec8c50.css.map",
+    "main.8222814c.js.map": "/BiharBites/static/js/main.8222814c.js.map",
+    "453.536e47ac.chunk.js.map": "/BiharBites/static/js/453.536e47ac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57ec8c50.css",
-    "static/js/main.ede35d28.js"
+    "static/js/main.8222814c.js"
   ]
 }
