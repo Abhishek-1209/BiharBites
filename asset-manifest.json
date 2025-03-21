@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BiharBites/static/css/main.155f4359.css",
-    "main.js": "/BiharBites/static/js/main.b23429c4.js",
+    "main.css": "/BiharBites/static/css/main.5e853d62.css",
+    "main.js": "/BiharBites/static/js/main.5bcc6671.js",
     "static/js/453.536e47ac.chunk.js": "/BiharBites/static/js/453.536e47ac.chunk.js",
     "index.html": "/BiharBites/index.html",
-    "main.155f4359.css.map": "/BiharBites/static/css/main.155f4359.css.map",
-    "main.b23429c4.js.map": "/BiharBites/static/js/main.b23429c4.js.map",
+    "main.5e853d62.css.map": "/BiharBites/static/css/main.5e853d62.css.map",
+    "main.5bcc6671.js.map": "/BiharBites/static/js/main.5bcc6671.js.map",
     "453.536e47ac.chunk.js.map": "/BiharBites/static/js/453.536e47ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.155f4359.css",
-    "static/js/main.b23429c4.js"
+    "static/css/main.5e853d62.css",
+    "static/js/main.5bcc6671.js"
   ]
 }
