@@ -70,8 +70,8 @@
   }
   
   .checkout-btn {
-    width: 100%;
-    padding: 10px;
+    width: 15%;
+    padding: 15px;
     background: #ffcc00;
     border: none;
     color: black;
@@ -79,9 +79,38 @@
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    margin-top:2.5%;
   }
   
   .checkout-btn:hover {
     background: #e6b800;
+  }
+  @media (max-width: 768px) {
+    .checkout-container {
+      padding: 15px;
+    }
+  
+    .checkout-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .checkout-form input,
+    .checkout-form select {
+      width: 100%;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .checkout-btn {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      background: green;
+      color: white;
+    }
+    .checkout-btn:hover {
+      background: darkgreen;
+    }
+    
   }
   

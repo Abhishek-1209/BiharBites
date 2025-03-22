@@ -1,17 +1,20 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import "./CheckoutPage.css";
 
 const CheckoutPage = () => {
-  const { cart } = useContext(CartContext) || { cart: [] }; // Ensures cart is always an array
+  const { cart ,clearCart} = useContext(CartContext) || { cart: [] }; // Ensures cart is always an array
   const [paymentMethod, setPaymentMethod] = useState("cod");
-
+  const navigate = useNavigate();
   const totalAmount = cart.length > 0 
     ? cart.reduce((acc, item) => acc + item.price * (item.quantity || 1), 0)
     : 0;
 
   const handlePayment = () => {
     alert(`Order placed successfully! Payment Method: ${paymentMethod}`);
+    clearCart();
+    navigate("/#");
   };
 
   return (
@@ -38,10 +41,11 @@ const CheckoutPage = () => {
               <input type="radio" value="cod" checked={paymentMethod === "cod"} onChange={() => setPaymentMethod("cod")} />
               Cash on Delivery
             </label>
-            <label>
-              <input type="radio" value="online" checked={paymentMethod === "online"} onChange={() => setPaymentMethod("online")} />
-              Online Payment (Coming Soon)
+            <label style={{ color: "grey", cursor: "not-allowed", opacity: 0.6 }}>
+                <input type="radio" name="payment" value="online" disabled />
+                 Online Payment (Coming Soon)
             </label>
+
           </div>
 
           <button className="btn btn-success" onClick={handlePayment}>Place Order</button>

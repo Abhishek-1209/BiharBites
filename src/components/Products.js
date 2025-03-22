@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import "./Products.css";
 import { CartContext } from "../context/CartContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const products = [
   {
@@ -26,22 +28,36 @@ const products = [
 const Products = () => {
   const { addToCart } = useContext(CartContext);
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    toast.success(`${product.name} added to cart!`, {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "colored",
+    });
+  };
+
   return (
     <section className="products">
       <h2>Our Premium Makhana</h2>
       <div className="product-container">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            {/* Updated Image Path */}
             <img src={product.image} alt={product.name} className="product-img" />
             <h3>{product.name}</h3>
             <p className="price">₹{product.price}</p>
-            <button className="btn btn-primary" onClick={() => addToCart(product)}>
+            <button className="btn btn-primary" onClick={() => handleAddToCart(product)}>
               Add to Cart
             </button>
           </div>
         ))}
       </div>
+      {/* Toast Container (Placed at Root Level) */}
+      <ToastContainer />
     </section>
   );
 };

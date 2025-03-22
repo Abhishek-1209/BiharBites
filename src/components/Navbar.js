@@ -26,7 +26,9 @@ const Navbar = () => {
         <li className="cart-icon">
         <Link to="/cart" className="cart-link">
          <FaShoppingCart size={22} />
-             <span className="cart-count">{cart?.length || 0}</span>
+          <span className="cart-count">
+              {cart.reduce((total, item) => total + item.quantity, 0)}
+          </span>
         </Link>
         </li>
       </ul>
